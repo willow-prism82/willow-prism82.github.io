@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>哑剧猫 - 无声喜剧影像品牌 - 用肢体讲述温暖故事</title>
+<meta name="description" content="哑剧猫官方网站，专注无声喜剧与肢体表演的原创视频品牌，汇聚专业创作者，打造高品质默剧内容生态，陪伴每一次真实的欢笑。">
+<style>
+:root{
+  --ink:#1c1a2b;
+  --ink-soft:#3a3650;
+  --paper:#f6f3ee;
+  --card:#ffffff;
+  --brand:#7c5cff;
+  --brand-deep:#5a3be0;
+  --accent:#ff8a5c;
+  --mint:#2fc4a6;
+  --line:#e5e0d6;
+  --muted:#6f6a80;
+  --radius:18px;
+  --shadow:0 14px 40px rgba(40,32,90,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+
+/* ===== 吸顶区 ===== */
+.sticky-wrap{position:sticky;top:0;z-index:80}
+.notice-bar{
+  background:linear-gradient(90deg,var(--ink) 0%,var(--brand-deep) 100%);
+  color:#f2eefe;
+  font-size:13.5px;
+  letter-spacing:.02em;
+  padding:9px 20px;
+  display:flex;align-items:center;gap:14px;
+  overflow:hidden;
+}
+.notice-bar .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 4px rgba(255,138,92,.25)}
+.notice-track{flex:1;overflow:hidden;white-space:nowrap;position:relative}
+.notice-track span{display:inline-block;padding-right:60px;animation:slide 26s linear infinite}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.notice-bar .nt-close{color:#c9c2ec;font-size:12px;flex:none;padding:0 4px}
+.notice-bar .nt-close:hover{color:#fff}
+
+header.site-head{
+  background:rgba(246,243,238,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  padding:0 20px;
+}
+.head-inner{
+  max-width:1200px;margin:0 auto;
+  height:70px;display:flex;align-items:center;gap:26px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.01em}
+.logo-mark{
+  width:38px;height:38px;border-radius:12px;flex:none;
+  background:linear-gradient(140deg,var(--brand),var(--accent));
+  display:grid;place-items:center;color:#fff;font-size:18px;box-shadow:0 6px 16px rgba(124,92,255,.35);
+}
+.logo small{display:block;font-size:10.5px;font-weight:500;color:var(--muted);letter-spacing:.14em;line-height:1.2}
+nav.main-nav{display:flex;gap:4px;margin-left:auto}
+nav.main-nav a{
+  padding:8px 13px;border-radius:10px;font-size:14.5px;color:var(--ink-soft);
+  transition:.2s;white-space:nowrap;
+}
+nav.main-nav a:hover{background:#ebe5fb;color:var(--brand-deep)}
+.head-tools{display:flex;align-items:center;gap:10px}
+.search-mini{
+  display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:5px 8px 5px 14px;
+}
+.search-mini input{
+  border:none;outline:none;background:transparent;width:120px;font-size:13.5px;color:var(--ink);
+}
+.search-mini input::placeholder{color:#a7a2b5}
+.search-mini button{
+  background:var(--brand);color:#fff;border-radius:999px;width:28px;height:28px;
+  display:grid;place-items:center;font-size:13px;transition:.2s;
+}
+.search-mini button:hover{background:var(--brand-deep)}
+.burger{display:none;width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid var(--line);font-size:18px;color:var(--ink-soft)}
+.mobile-nav{display:none;background:#fff;border-bottom:1px solid var(--line);padding:8px 16px 16px}
+.mobile-nav a{display:block;padding:11px 10px;border-radius:10px;font-size:15px;color:var(--ink-soft)}
+.mobile-nav a:hover{background:#f3effe;color:var(--brand-deep)}
+.mobile-nav.open{display:block}
+
+/* ===== 通用 ===== */
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+section{padding:74px 0;scroll-margin-top:130px}
+.sec-head{margin-bottom:36px;max-width:760px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:.18em;color:var(--brand-deep);
+  background:#efe9ff;padding:5px 12px;border-radius:999px;font-weight:600;margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h2{font-size:clamp(24px,3.2vw,34px);line-height:1.3;letter-spacing:-.01em}
+h2 em{font-style:normal;color:var(--brand-deep)}
+.sec-head p{color:var(--muted);margin-top:12px;font-size:15px}
+h3{font-size:17.5px;line-height:1.45}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  padding:12px 22px;border-radius:12px;font-size:14.5px;font-weight:600;transition:.22s;
+}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-deep));color:#fff;box-shadow:0 10px 26px rgba(124,92,255,.32)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(124,92,255,.42)}
+.btn-ghost{border:1.5px solid #d8d1ee;color:var(--ink-soft);background:#fff}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-deep)}
+.btn-soft{background:#f1ecff;color:var(--brand-deep)}
+.btn-soft:hover{background:#e6ddff}
+
+/* ===== 首屏 ===== */
+.hero{padding:64px 0 70px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;right:-140px;top:-120px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,rgba(124,92,255,.18),rgba(255,138,92,.10) 55%,transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:5.5fr 4.5fr;gap:52px;align-items:center;position:relative}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--mint);
+  background:#e3faf4;padding:6px 14px;border-radius:999px;margin-bottom:18px;
+}
+.hero-tag b{color:var(--ink)}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.12;letter-spacing:-.025em;font-weight:800}
+h1 .hl{
+  background:linear-gradient(120deg,var(--brand-deep),var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{font-size:18px;color:var(--ink-soft);margin-top:16px;font-weight:600}
+.hero-lead{color:var(--muted);margin-top:16px;font-size:15px;max-width:560px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-stats{display:flex;gap:34px;margin-top:38px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:27px;font-weight:800;letter-spacing:-.01em}
+.hero-stats div span{font-size:12.8px;color:var(--muted);letter-spacing:.03em}
+.hero-visual{position:relative}
+.hero-visual .main-card{
+  border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.7);
+  background:#fff;
+}
+.hero-visual .main-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.hero-visual .float-card{
+  position:absolute;left:-26px;bottom:-26px;background:#fff;border-radius:16px;padding:14px 18px;
+  box-shadow:0 18px 40px rgba(40,32,90,.16);border:1px solid var(--line);display:flex;gap:12px;align-items:center;
+}
+.float-card .fc-ico{width:40px;height:40px;border-radius:12px;background:#fff2ec;display:grid;place-items:center;font-size:19px}
+.float-card b{font-size:14px;display:block}
+.float-card span{font-size:12px;color:var(--muted)}
+
+/* ===== 焦点内容 ===== */
+.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.focus-big{grid-column:span 2;grid-row:span 2}
+.vcard{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 6px 20px rgba(40,32,90,.06);transition:.26s;display:flex;flex-direction:column;
+}
+.vcard:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(40,32,90,.14);border-color:#d8d1ee}
+.cover{position:relative;display:block;overflow:hidden}
+.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+.vcard:hover .cover img{transform:scale(1.05)}
+.cover .play{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.cover .play span{
+  width:52px;height:52px;border-radius:50%;background:rgba(20,14,50,.55);backdrop-filter:blur(4px);
+  display:grid;place-items:center;color:#fff;font-size:18px;padding-left:4px;transition:.24s;
+}
+.vcard:hover .cover .play span{background:var(--brand);transform:scale(1.08)}
+.cover .badge{
+  position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);color:var(--brand-deep);
+  font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.04em;
+}
+.cover .dur{
+  position:absolute;right:12px;bottom:12px;background:rgba(16,12,40,.72);color:#fff;font-size:11.5px;
+  padding:3px 8px;border-radius:6px;font-variant-numeric:tabular-nums;
+}
+.vcard-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vcard-body h3 a:hover{color:var(--brand-deep)}
+.vcard-body p{font-size:13.6px;color:var(--muted)}
+.vmeta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:6px;flex-wrap:wrap}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+  color:#fff;font-size:12px;font-weight:700;
+}
+.vtags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.vtags span{font-size:11.5px;background:#f2eefe;color:var(--brand-deep);padding:2px 9px;border-radius:999px}
+.vactions{display:flex;gap:8px;margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}
+.act{
+  font-size:12.8px;color:var(--muted);display:inline-flex;align-items:center;gap:5px;
+  padding:5px 10px;border-radius:9px;transition:.2s;
+}
+.act:hover{background:#f4f0ff;color:var(--brand-deep)}
+.act.liked{color:var(--accent);font-weight:700}
+.act.saved{color:var(--brand);font-weight:700}
+.focus-big .vcard-body h3{font-size:21px}
+.focus-big .vcard-body p{font-size:14.5px}
+
+/* ===== 专题 ===== */
+.section-alt{background:#fbf9f5;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.topic{
+  position:relative;border-radius:var(--radius);overflow:hidden;background:var(--card);
+  border:1px solid var(--line);transition:.26s;
+}
+.topic:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(40,32,90,.12)}
+.topic .tcover{position:relative}
+.topic .tcover img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.topic .tcover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,14,50,.62))}
+.topic .tlabel{
+  position:absolute;left:14px;top:14px;z-index:2;background:var(--accent);color:#fff;font-size:11.5px;font-weight:700;
+  padding:4px 11px;border-radius:999px;letter-spacing:.04em;
+}
+.topic .tstatus{
+  position:absolute;left:14px;bottom:14px;z-index:2;color:#fff;font-size:12.5px;font-weight:600;
+  display:flex;align-items:center;gap:6px;
+}
+.topic .tstatus i{width:7px;height:7px;border-radius:50%;background:var(--mint);display:block;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.topic .tbody{padding:16px 18px 18px}
+.topic .tbody h3{font-size:16.5px;margin-bottom:6px}
+.topic .tbody p{font-size:13.4px;color:var(--muted)}
+.topic .tbody .tnums{margin-top:10px;font-size:12.3px;color:var(--brand-deep);font-weight:600}
+
+/* ===== 创作者 ===== */
+.creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.creator{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px;text-align:center;
+  transition:.26s;position:relative;overflow:hidden;
+}
+.creator::before{content:"";position:absolute;inset:0 0 auto 0;height:66px;background:linear-gradient(120deg,#f1ecff,#fff2ec)}
+.creator:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(40,32,90,.12)}
+.creator .cav{
+  width:66px;height:66px;border-radius:50%;margin:0 auto 14px;position:relative;z-index:2;
+  display:grid;place-items:center;font-size:23px;font-weight:800;color:#fff;border:3px solid #fff;
+  box-shadow:0 8px 20px rgba(40,32,90,.16);
+}
+.creator h3{font-size:16px;position:relative;z-index:2}
+.creator .crole{font-size:12.3px;color:var(--brand-deep);font-weight:600;margin-top:3px;position:relative;z-index:2}
+.creator p{font-size:12.9px;color:var(--muted);margin-top:10px;min-height:60px}
+.creator .cnums{display:flex;justify-content:center;gap:18px;margin-top:10px;font-size:12.2px;color:var(--muted)}
+.creator .cnums b{color:var(--ink);display:block;font-size:14px}
+.creator .cbtn{margin-top:14px;width:100%;font-size:13px;padding:9px}
+
+/* ===== 作品墙 ===== */
+.wall{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:132px;gap:16px}
+.wall figure{
+  position:relative;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line);
+  transition:.26s;
+}
+.wall figure:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(40,32,90,.14)}
+.wall figure img{width:100%;height:100%;object-fit:cover}
+.wall figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:26px 13px 11px;color:#fff;font-size:12.7px;font-weight:600;
+  background:linear-gradient(180deg,transparent,rgba(18,12,45,.78));
+}
+.wall .w-big{grid-column:span 2;grid-row:span 2}
+.wall .w-wide{grid-column:span 2}
+
+/* ===== 故事区 ===== */
+.stories{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.story{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;transition:.24s}
+.story:hover{border-color:#d8d1ee;box-shadow:0 14px 34px rgba(40,32,90,.09)}
+.story .sico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:19px;margin-bottom:14px}
+.story h3{font-size:16px;margin-bottom:8px}
+.story p{font-size:13.6px;color:var(--muted)}
+.story .sby{margin-top:14px;font-size:12.3px;color:var(--brand-deep);font-weight:600}
+
+/* ===== 评价 ===== */
+.reviews{columns:2;column-gap:22px}
+.review{
+  break-inside:avoid;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin-bottom:20px;
+  transition:.24s;
+}
+.review:hover{border-color:#d8d1ee;box-shadow:0 12px 30px rgba(40,32,90,.08)}
+.review .rhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.review .rhead b{font-size:13.8px}
+.review .rhead span{font-size:11.7px;color:var(--muted)}
+.review .rstars{color:var(--accent);font-size:12.5px;letter-spacing:2px;margin-left:auto}
+.review p{font-size:13.6px;color:var(--ink-soft)}
+
+/* ===== 动态 ===== */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--brand),transparent)}
+.tl-item{position:relative;padding:0 0 26px 4px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:7px;width:11px;height:11px;border-radius:50%;background:#fff;border:3px solid var(--brand)}
+.tl-item:last-child{padding-bottom:0}
+.tl-item .tldate{font-size:12.2px;color:var(--brand-deep);font-weight:700;letter-spacing:.05em}
+.tl-item h3{font-size:15.5px;margin:3px 0 4px}
+.tl-item p{font-size:13.5px;color:var(--muted)}
+.dyn-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+.partners{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.partner{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 12px;text-align:center;
+  font-size:13px;font-weight:600;color:var(--ink-soft);transition:.2s;
+}
+.partner:hover{border-color:var(--brand);color:var(--brand-deep);background:#faf8ff}
+
+/* ===== FAQ ===== */
+.faq{max-width:860px;margin:0 auto}
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;
+  transition:.2s;
+}
+.faq details[open]{border-color:#d8d1ee;box-shadow:0 10px 26px rgba(40,32,90,.07)}
+.faq summary{
+  padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--brand);font-weight:400;transition:.2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:0 20px 18px;font-size:13.8px;color:var(--muted)}
+
+/* ===== 联系 ===== */
+.contact-box{
+  background:linear-gradient(135deg,var(--ink),#2a2350 60%,var(--brand-deep));
+  border-radius:26px;padding:48px 42px;color:#efeaff;position:relative;overflow:hidden;
+}
+.contact-box::after{
+  content:"";position:absolute;right:-80px;bottom:-100px;width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,138,92,.35),transparent 68%);
+}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;position:relative;z-index:2}
+.contact-box h2{color:#fff}
+.contact-box .sec-head p{color:#c4bce6}
+.c-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.c-actions .btn-ghost{background:transparent;border-color:rgba(255,255,255,.34);color:#fff}
+.c-actions .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);color:#fff}
+.c-actions .btn-primary{background:linear-gradient(135deg,var(--accent),#ff6f3c);box-shadow:0 10px 26px rgba(255,138,92,.35)}
+.c-info{display:flex;flex-direction:column;gap:14px}
+.c-info div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 18px;backdrop-filter:blur(4px)}
+.c-info span{display:block;font-size:11.8px;letter-spacing:.14em;color:#a99fd4;margin-bottom:2px}
+.c-info b{font-size:14.5px;font-weight:600;color:#fff}
+
+/* ===== 页脚 ===== */
+footer.site-foot{background:#151226;color:#a9a2c4;padding:56px 0 26px;font-size:13.6px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.09)}
+.foot-grid .flogo{display:flex;align-items:center;gap:10px;color:#fff;font-size:18px;font-weight:800;margin-bottom:12px}
+.foot-grid p{font-size:13px;line-height:1.85;color:#8f88ad}
+.foot-grid h4{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.04em}
+.foot-grid ul li{margin-bottom:9px}
+.foot-grid ul a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;font-size:12.4px;color:#7d769b}
+.foot-bottom .fb-links{display:flex;gap:16px;flex-wrap:wrap}
+.foot-bottom .fb-links a:hover{color:#fff}
+
+/* ===== Toast / 弹窗 / 回顶 ===== */
+#toast{
+  position:fixed;left:50%;bottom:42px;transform:translate(-50%,26px);opacity:0;pointer-events:none;
+  background:rgba(24,18,52,.94);color:#fff;padding:11px 22px;border-radius:12px;font-size:13.6px;
+  z-index:200;transition:.3s;box-shadow:0 14px 34px rgba(0,0,0,.28);
+}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.modal-mask{
+  position:fixed;inset:0;background:rgba(18,12,42,.55);backdrop-filter:blur(4px);z-index:150;
+  display:none;place-items:center;padding:20px;
+}
+.modal-mask.open{display:grid}
+.modal{
+  background:#fff;border-radius:20px;max-width:520px;width:100%;padding:28px 26px;position:relative;
+  box-shadow:0 30px 70px rgba(0,0,0,.3);animation:pop .26s ease;
+}
+@keyframes pop{from{transform:translateY(14px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.modal h3{font-size:19px;margin-bottom:8px}
+.modal p{font-size:13.8px;color:var(--muted);margin-bottom:18px}
+.modal .mclose{position:absolute;right:14px;top:12px;font-size:20px;color:#a7a2b5;padding:4px 8px}
+.modal .mclose:hover{color:var(--ink)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12.8px;font-weight:600;margin-bottom:6px;color:var(--ink-soft)}
+.field input,.field textarea,.field select{
+  width:100%;border:1px solid var(--line);border-radius:11px;padding:10px 13px;font-size:13.8px;
+  font-family:inherit;outline:none;background:#fbfaf7;color:var(--ink);transition:.2s;
+}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--brand);background:#fff;box-shadow:0 0 0 3px rgba(124,92,255,.13)}
+.modal .btn{width:100%;margin-top:4px}
+#backTop{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;z-index:90;
+  background:linear-gradient(140deg,var(--brand),var(--brand-deep));color:#fff;font-size:17px;
+  display:grid;place-items:center;box-shadow:0 12px 30px rgba(124,92,255,.4);
+  opacity:0;pointer-events:none;transition:.28s;
+}
+#backTop.show{opacity:1;pointer-events:auto}
+#backTop:hover{transform:translateY(-3px)}
+
+.search-tip{
+  margin-top:22px;font-size:13.5px;color:var(--brand-deep);background:#f1ecff;border:1px dashed #d3c7ff;
+  border-radius:12px;padding:12px 16px;display:none;
+}
+.search-tip.show{display:block}
+mark{background:#ffe1d4;color:var(--ink);border-radius:3px;padding:0 2px}
+
+/* ===== 响应式 ===== */
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-visual .float-card{left:12px;bottom:-20px}
+  .focus-grid{grid-template-columns:repeat(2,1fr)}
+  .focus-big{grid-column:span 2;grid-row:auto}
+  .topics{grid-template-columns:repeat(2,1fr)}
+  .creators{grid-template-columns:repeat(2,1fr)}
+  .stories{grid-template-columns:1fr}
+  .dyn-grid{grid-template-columns:1fr;gap:34px}
+  .contact-grid{grid-template-columns:1fr;gap:30px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .wall{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:760px){
+  nav.main-nav{display:none}
+  .search-mini input{width:88px}
+  .burger{display:grid}
+  section{padding:56px 0;scroll-margin-top:120px}
+  .focus-grid{grid-template-columns:1fr}
+  .focus-big{grid-column:span 1}
+  .topics{grid-template-columns:1fr}
+  .creators{grid-template-columns:1fr 1fr}
+  .reviews{columns:1}
+  .wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:124px}
+  .wall .w-big{grid-column:span 2;grid-row:span 2}
+  .contact-box{padding:34px 22px;border-radius:20px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-stats{gap:24px}
+}
+@media(max-width:480px){
+  .head-inner{height:62px;gap:12px}
+  .logo{font-size:17px}
+  .logo-mark{width:34px;height:34px;border-radius:10px;font-size:16px}
+  .search-mini{display:none}
+  .creators{grid-template-columns:1fr}
+  .partners{grid-template-columns:1fr 1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice-bar" id="noticeBar">
+    <i class="dot"></i>
+    <div class="notice-track"><span id="noticeText">官方发布｜《哑剧猫·城市默片》第三季 4 月 18 日上线&nbsp;&nbsp;·&nbsp;&nbsp;新晋创作者「纸箱剧场」入驻并开启 7 天连更挑战&nbsp;&nbsp;·&nbsp;&nbsp;春季肢体喜剧共创比赛开放报名，前 30 名作品获首页展位&nbsp;&nbsp;·&nbsp;&nbsp;「无声的温柔」专题已更新 12 支高清短片&nbsp;&nbsp;·&nbsp;&nbsp;</span></div>
+    <button class="nt-close" onclick="document.getElementById('noticeBar').style.display='none'" aria-label="关闭公告">✕</button>
+  </div>
+
+  <header class="site-head">
+    <div class="head-inner">
+      <a class="logo" href="#top" aria-label="哑剧猫官方网站首页">
+        <span class="logo-mark">🐾</span>
+        <span>哑剧猫<small>MIME CAT</small></span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#top">首页</a>
+        <a href="#focus">焦点内容</a>
+        <a href="#topics">专题企划</a>
+        <a href="#creators">创作者</a>
+        <a href="#wall">影像墙</a>
+        <a href="#news">企业动态</a>
+        <a href="#faq">帮助</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <div class="head-tools">
+        <form class="search-mini" onsubmit="return doSearch(event)" role="search">
+          <input id="searchInput" type="search" placeholder="搜索默剧、创作者…" aria-label="站内搜索">
+          <button type="submit" aria-label="搜索">⌕</button>
+        </form>
+        <button class="burger" id="burger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+    <a href="#top">首页</a>
+    <a href="#focus">焦点内容</a>
+    <a href="#topics">专题企划</a>
+    <a href="#creators">创作者</a>
+    <a href="#wall">影像墙</a>
+    <a href="#news">企业动态</a>
+    <a href="#faq">帮助</a>
+    <a href="#contact">联系</a>
+  </nav>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tag">🐾 官方 <b>哑剧猫</b> 品牌视频门户</div>
+          <h1>哑剧猫<br><span class="hl">让无声，被听见</span></h1>
+          <p class="hero-sub">一家以默剧与肢体喜剧为核心的原创视频品牌</p>
+          <p class="hero-lead">作为国内深耕无声表演领域的视频品牌，哑剧猫官方网站致力于为一群安静而热烈的创作者搭建高品质内容生态。我们相信沉默里有最真实的情绪，也有最温暖的力量——从街头默剧到客厅小剧场，从一笔一画的妆造到一帧一帧的剪辑，我们把那些不需要台词的瞬间，做成可以反复观看的精品内容。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#focus">进入内容中心 →</a>
+            <a class="btn btn-ghost" href="#contact">投稿与共创</a>
+            <a class="btn btn-soft" href="#topics">查看专题企划</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong data-count="18600">18,600+</strong><span>原创默剧短片</span></div>
+            <div><strong data-count="1240">1,240</strong><span>签约与入驻创作者</span></div>
+            <div><strong data-count="96">96.4%</strong><span>社区正向口碑</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="main-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23241d4e'/%3E%3Cstop offset='1' stop-color='%235a3be0'/%3E%3C/linearGradient%3E%3CradialGradient id='g2' cx='.7' cy='.3' r='.6'%3E%3Cstop offset='0' stop-color='%23ff8a5c' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23ff8a5c' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23g1)'/%3E%3Crect width='640' height='400' fill='url(%23g2)'/%3E%3Ccircle cx='470' cy='120' r='54' fill='%23ffd9c7' opacity='.85'/%3E%3Cpath d='M470 74c-22 0-38 16-38 38 0 6 2 12 5 17l-8 16 18-6c7 4 15 6 23 6 22 0 38-16 38-38s-16-33-38-33z' fill='%23ff8a5c' opacity='.9'/%3E%3Cpath d='M446 96l-8-22 18 10zM494 96l8-22-18 10z' fill='%23ff8a5c'/%3E%3Ccircle cx='460' cy='106' r='4' fill='%23241d4e'/%3E%3Ccircle cx='480' cy='106' r='4' fill='%23241d4e'/%3E%3Cpath d='M464 118q6 6 12 0' stroke='%23241d4e' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Crect x='70' y='250' width='230' height='12' rx='6' fill='%23f6f3ee' opacity='.85'/%3E%3Crect x='70' y='278' width='170' height='10' rx='5' fill='%23f6f3ee' opacity='.55'/%3E%3Crect x='70' y='304' width='120' height='10' rx='5' fill='%23f6f3ee' opacity='.4'/%3E%3Ccircle cx='560' cy='310' r='60' fill='%232fc4a6' opacity='.35'/%3E%3Ccircle cx='90' cy='90' r='40' fill='%23ffffff' opacity='.08'/%3E%3C/svg%3E" alt="哑剧猫官方主视觉：深紫舞台上的小猫演员与暖色聚光灯" width="640" height="400">
+          </div>
+          <div class="float-card">
+            <span class="fc-ico">🎭</span>
+            <div><b>本周精选 · 无声剧场</b><span>《一张椅子的三种孤独》</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="search-tip" id="searchTip"></div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section id="focus" class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">焦点内容</span>
+        <h2>今日焦点：<em>不说话的那几分钟</em></h2>
+        <p>由哑剧猫编辑团队与社区创作者共同挑选，覆盖教程、测评、访谈与城市默片，每一支都经过高清修复与字幕校对，值得你安静看完。</p>
+      </div>
+      <div class="focus-grid" id="focusGrid">
+
+        <article class="vcard focus-big" data-keywords="默剧 入门 身体 控制 教程">
+          <a href="#focus" class="cover" onclick="return openVideo(event,'《从零开始的身体默剧：7天找回笨拙的可爱》')">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='a1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23fff2ec'/%3E%3Cstop offset='1' stop-color='%23ffd9c7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23a1)'/%3E%3Ccircle cx='640' cy='110' r='120' fill='%23ff8a5c' opacity='.22'/%3E%3Ccircle cx='140' cy='350' r='150' fill='%237c5cff' opacity='.16'/%3E%3Cg stroke='%235a3be0' stroke-width='7' fill='none' stroke-linecap='round'%3E%3Cpath d='M300 340q40-120 120-120t120 120'/%3E%3Cpath d='M420 220v-70'/%3E%3Ccircle cx='420' cy='128' r='26'/%3E%3Cpath d='M360 340l-30 60M480 340l30 60'/%3E%3C/g%3E%3Crect x='520' y='300' width='180' height='14' rx='7' fill='%235a3be0' opacity='.3'/%3E%3Crect x='520' y='330' width='120' height='12' rx='6' fill='%235a3be0' opacity='.2'/%3E%3C/svg%3E" alt="《从零开始的身体默剧》教程封面：手绘线条人形与暖橘背景">
+            <div class="play"><span>▶</span></div>
+            <span class="badge">教程干货</span>
+            <span class="dur">18:42</span>
+          </a>
+          <div class="vcard-body">
+            <h3><a href="#focus" onclick="return openVideo(event,'《从零开始的身体默剧：7天找回笨拙的可爱》')">从零开始的身体默剧：7天找回笨拙的可爱</a></h3>
+            <p>哑剧猫官方教研组把十年舞台经验拆成 7 个可练习的小动作：眼神停留、重心转移、空气递物、无声大笑……不需要舞蹈基础，每天 20 分钟，对着镜子也能完成。</p>
+            <div class="vtags"><span>默剧入门</span><span>身体控制</span><span>新手友好</span></div>
+            <div class="vmeta">
+              <span class="avatar" style="background:#5a3be0">哑</span>
+              <span>哑剧猫官方教研组</span>
+              <span>·</span>
+              <span>1.2 万次学习</span>
+            </div>
+            <div class="vactions">
+              <button class="act" onclick="toggleLike(this)" data-likes="3284">👍 <b>3284</b></button>
+              <button class="act" onclick="toggleSave(this)">☆ 收藏</button>
+              <button class="act" onclick="copyLink(this)">🔗 复制链接</button>
+              <button class="act" onclick="openComment(this,'《从零开始的身体默剧》')">💬 评论 216</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="vcard" data-keywords="城市 默片 街头 成都">
+          <a href="#focus" class="cover" onclick="return openVideo(event,'《城市默片·成都：在地铁口演一只猫》')">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='b1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232dc4a6'/%3E%3Cstop offset='1' stop-color='%23241d4e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23b1)'/%3E%3Crect x='0' y='250' width='640' height='110' fill='%2317123a' opacity='.6'/%3E%3Cg fill='%23f6f3ee' opacity='.85'%3E%3Crect x='60' y='120' width='70' height='140' rx='4'/%3E%3Crect x='150' y='90' width='56' height='170' rx='4'/%3E%3Crect x='470' y='110' width='80' height='150' rx='4'/%3E%3Crect x='566' y='140' width='48' height='120' rx='4'/%3E%3C/g%3E%3Cg fill='%23ffd9c7' opacity='.9'%3E%3Crect x='76' y='140' width='14' height='18'/%3E%3Crect x='104' y='140' width='14' height='18'/%3E%3Crect x='76' y='172' width='14' height='18'/%3E%3Crect x='164' y='112' width='12' height='16'/%3E%3Crect x='486' y='130' width='16' height='20'/%3E%3C/g%3E%3Ccircle cx='320' cy='196' r='34' fill='%23ff8a5c'/%3E%3Cpath d='M288 176l-10-24 22 10zM352 176l10-24-22 10z' fill='%23ff8a5c'/%3E%3Ccircle cx='310' cy='192' r='4' fill='%23241d4e'/%3E%3Ccircle cx='330' cy='192' r='4' fill='%23241d4e'/%3E%3Cpath d='M314 204q6 5 12 0' stroke='%23241d4e' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="城市默片成都篇封面：夜色楼宇与地铁口的小猫身影">
+            <div class="play"><span>▶</span></div>
+            <span class="badge">城市默片</span>
+            <span class="dur">09:15</span>
+          </a>
+          <div class="vcard-body">
+            <h3><a href="#focus" onclick="return openVideo(event,'《城市默片·成都：在地铁口演一只猫》')">城市默片·成都：在地铁口演一只猫</a></h3>
+            <p>没有一句台词，只有脚步、风和围观者的笑。创作者把街头当作舞台，用一只猫的视角记录城市最松弛的一面。</p>
+            <div class="vtags"><span>城市探索</span><span>在地文化</span></div>
+            <div class="vmeta">
+              <span class="avatar" style="background:#2fc4a6">纸</span>
+              <span>纸箱剧场</span>
+              <span>·</span>
+              <span>6842 次播放</span>
+            </div>
+            <div class="vactions">
+              <button class="act" onclick="toggleLike(this)" data-likes="1594">👍 <b>1594</b></button>
+              <button class="act" onclick="toggleSave(this)">☆ 收藏</button>
+              <button class="act" onclick="copyLink(this)">🔗 复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="vcard" data-keywords="人物 访谈 幕后 默剧演员">
+          <a href="#focus" class="cover" onclick="return openVideo(event,'《人物访谈：一位默剧演员的十年无声日记》')">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='c1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%23ff8a5c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23c1)'/%3E%3Ccircle cx='320' cy='158' r='66' fill='%23fff2ec' opacity='.95'/%3E%3Ccircle cx='320' cy='150' r='24' fill='%235a3be0'/%3E%3Cpath d='M290 132l-8-20 18 9zM350 132l8-20-18 9z' fill='%235a3be0'/%3E%3Cpath d='M286 214q34 26 68 0' stroke='%235a3be0' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Crect x='120' y='286' width='400' height='10' rx='5' fill='%23ffffff' opacity='.6'/%3E%3Crect x='190' y='310' width='260' height='8' rx='4' fill='%23ffffff' opacity='.4'/%3E%3Ccircle cx='560' cy='80' r='34' fill='%23ffffff' opacity='.2'/%3E%3Ccircle cx='90' cy='290' r='44' fill='%23241d4e' opacity='.2'/%3E%3C/svg%3E" alt="人物访谈封面：紫橙渐变与微笑的默剧面具">
+            <div class="play"><span>▶</span></div>
+            <span class="badge">人物访谈</span>
+            <span class="dur">24:06</span>
+          </a>
+          <div class="vcard-body">
+            <h3><a href="#focus" onclick="return openVideo(event,'《人物访谈：一位默剧演员的十年无声日记》')">人物访谈：一位默剧演员的十年无声日记</a></h3>
+            <p>从县城礼堂到国际戏剧节，她聊了膝盖的伤、观众的笑，以及为什么坚持不开口。</p>
+            <div class="vtags"><span>创作者故事</span><span>深度访谈</span></div>
+            <div class="vmeta">
+              <span class="avatar" style="background:#7c5cff">陈</span>
+              <span>陈默</span>
+              <span>·</span>
+              <span>9310 次播放</span>
+            </div>
+            <div class="vactions">
+              <button class="act" onclick="toggleLike(this)" data-likes="2210">👍 <b>2210</b></button>
+              <button class="act" onclick="toggleSave(this)">☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="vcard" data-keywords="测评 道具 无声 表演 器材">
+          <a href="#focus" class="cover" onclick="return openVideo(event,'《无声表演三大神器实测：气球、椅子与一把伞》')">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='d1' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23f6f3ee'/%3E%3Cstop offset='1' stop-color='%23e6ddff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23d1)'/%3E%3Ccircle cx='175' cy='170' r='62' fill='%23ff8a5c' opacity='.9'/%3E%3Cpath d='M155 232l14 34M195 232l-14 34' stroke='%23241d4e' stroke-width='5' stroke-linecap='round'/%3E%3Crect x='280' y='120' width='96' height='120' rx='10' fill='%232fc4a6' opacity='.85'/%3E%3Cpath d='M280 240l-22 46M376 240l22 46' stroke='%23241d4e' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M430 210q50-120 110 0z' fill='%235a3be0'/%3E%3Cpath d='M485 210v78' stroke='%23241d4e' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" alt="无声表演道具测评封面：气球、椅子与紫色雨伞">
+            <div class="play"><span>▶</span></div>
+            <span class="badge">深度测评</span>
+            <span class="dur">12:33</span>
+          </a>
+          <div class="vcard-body">
+            <h3><a href="#focus" onclick="return openVideo(event,'《无声表演三大神器实测：气球、椅子与一把伞》')">无声表演三大神器实测：气球、椅子与一把伞</a></h3>
+            <p>哪些道具真的能撑起一支默剧？我们用 6 组对比镜头给你答案，附新手采购清单。</p>
+            <div class="vtags"><span>实用技巧</span><span>器材清单</span></div>
+            <div class="vmeta">
+              <span class="avatar" style="background:#ff8a5c">袋</span>
+              <span>布袋研究员</span>
+              <span>·</span>
+              <span>5127 次播放</span>
+            </div>
+            <div class="vactions">
+              <button class="act" onclick="toggleLike(this)" data-likes="1180">👍 <b>1180</b></button>
+              <button class="act" onclick="toggleSave(this)">☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section id="topics">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">专题企划</span>
+        <h2>用主题串起<em>整个社区的表达</em></h2>
+        <p>哑剧猫官方每季度发起一次共创企划，从选题、拍摄到剪辑全程开放投稿，入选作品将获得首页推荐与联合署名，并参与线下放映。</p>
+      </div>
+      <div class="topics">
+        <article class="topic">
+          <div class="tcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Cdefs%3E%3ClinearGradient id='e1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd9c7'/%3E%3Cstop offset='1' stop-color='%23ff8a5c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23e1)'/%3E%3Cg fill='%23241d4e' opacity='.8'%3E%3Crect x='90' y='250' width='460' height='14' rx='7'/%3E%3Crect x='130' y='210' width='380' height='12' rx='6' opacity='.6'/%3E%3Crect x='180' y='174' width='280' height='10' rx='5' opacity='.4'/%3E%3C/g%3E%3Ccircle cx='320' cy='120' r='46' fill='%23241d4e'/%3E%3Ccircle cx='304' cy='112' r='5' fill='%23ffd9c7'/%3E%3Ccircle cx='336' cy='112' r='5' fill='%23ffd9c7'/%3E%3Cpath d='M306 134q14 12 28 0' stroke='%23ffd9c7' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="专题《无声的温柔》封面：暖橘阶梯与黑色剪影轮廓">
+            <span class="tlabel">编辑推荐</span>
+            <span class="tstatus"><i></i>更新中 · 已上线 12 支</span>
+          </div>
+          <div class="tbody">
+            <h3>无声的温柔</h3>
+            <p>把镜头放低一点，拍那些没说出口的关心：递伞、系鞋带、留一盏灯。所有作品统一 4:3 画幅与自然光，鼓励克制的表达。</p>
+            <div class="tnums">3.2 万人参与 · 作品墙持续开放</div>
+          </div>
+        </article>
+
+        <article class="topic">
+          <div class="tcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Cdefs%3E%3ClinearGradient id='e2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232fc4a6'/%3E%3Cstop offset='1' stop-color='%231a3b52'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23e2)'/%3E%3Cg stroke='%23f6f3ee' stroke-width='4' opacity='.5' fill='none'%3E%3Cpath d='M0 320q160-90 320 0t320 0'/%3E%3Cpath d='M0 260q160-70 320 0t320 0'/%3E%3Cpath d='M0 200q160-50 320 0t320 0'/%3E%3C/g%3E%3Ccircle cx='470' cy='120' r='42' fill='%23ffd9c7' opacity='.9'/%3E%3Cpath d='M120 300l40-90 40 90z' fill='%23f6f3ee' opacity='.75'/%3E%3C/svg%3E" alt="专题《城市默片计划》封面：青绿色波浪与远处的小船">
+            <span class="tlabel">长期企划</span>
+            <span class="tstatus"><i></i>第六期征集中</span>
+          </div>
+          <div class="tbody">
+            <h3>城市默片计划</h3>
+            <p>邀请创作者用一天时间、一个地标、一段无台词的表演，记录自己所在城市的呼吸节奏。每期由官方提供统一片头与声音设计包。</p>
+            <div class="tnums">覆盖 26 座城市 · 累计投稿 1740 支</div>
+          </div>
+        </article>
+
+        <article class="topic">
+          <div class="tcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Cdefs%3E%3ClinearGradient id='e3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235a3be0'/%3E%3Cstop offset='1' stop-color='%23241d4e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23e3)'/%3E%3Cg fill='none' stroke='%23ff8a5c' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M170 300V160a50 50 0 0150-50h150a50 50 0 0150 50v140'/%3E%3Cpath d='M230 300v-90h130v90'/%3E%3C/g%3E%3Ccircle cx='295' cy='168' r='16' fill='%23ffd9c7'/%3E%3Ccircle cx='320' cy='240' r='8' fill='%23ff8a5c'/%3E%3Ccircle cx='270' cy='240' r='8' fill='%23ff8a5c'/%3E%3C/svg%3E" alt="专题《小剧场共创赛》封面：紫底橙色剧场门框与灯光">
+            <span class="tlabel">共创比赛</span>
+            <span class="tstatus"><i></i>报名开启 · 4 月 30 日截止</span>
+          </div>
+          <div class="tbody">
+            <h3>小剧场共创赛</h3>
+            <p>两人一组、三分钟以内、不超过三个道具，用最少的资源讲一个完整的故事。评审团由哑剧猫签约导演与社区代表共同组成。</p>
+            <div class="tnums">奖金池 8 万元 · 前 30 名获首页展位</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section id="creators" class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">创作者矩阵</span>
+        <h2>安静的人，<em>做出很响的作品</em></h2>
+        <p>哑剧猫坚持与原创创作者长期合作，提供拍摄场地、声音设计与发行支持。以下是本季度表现突出的四位社区成员。</p>
+      </div>
+      <div class="creators">
+        <article class="creator">
+          <div class="cav" style="background:linear-gradient(140deg,#7c5cff,#5a3be0)">陈</div>
+          <h3>陈默</h3>
+          <div class="crole">默剧演员 / 导演</div>
+          <p>十年舞台经验，擅长用极小的动作变化制造情绪落差。代表作《等一个人》系列。</p>
+          <div class="cnums"><div><b>128</b>作品</div><div><b>24.6万</b>关注</div></div>
+          <button class="btn btn-soft cbtn" onclick="openAuthor('陈默','默剧演员 / 导演','十年舞台经验，擅长用极小的动作变化制造情绪落差。她相信默剧不是不说话，而是把话说得更慢一点。')">查看档案</button>
+        </article>
+
+        <article class="creator">
+          <div class="cav" style="background:linear-gradient(140deg,#2fc4a6,#1a8f78)">纸</div>
+          <h3>纸箱剧场</h3>
+          <div class="crole">场景设计 / 街头表演</div>
+          <p>用纸板和胶带搭出整座城市，把日常空间改造为临时舞台，作品朴素而有生命力。</p>
+          <div class="cnums"><div><b>76</b>作品</div><div><b>15.2万</b>关注</div></div>
+          <button class="btn btn-soft cbtn" onclick="openAuthor('纸箱剧场','场景设计 / 街头表演','两个人的小团队，白天搬砖晚上搭台。用纸板和胶带搭出整座城市，把日常空间改造为临时舞台。')">查看档案</button>
+        </article>
+
+        <article class="creator">
+          <div class="cav" style="background:linear-gradient(140deg,#ff8a5c,#e0653a)">布</div>
+          <h3>布袋研究员</h3>
+          <div class="crole">道具测评 / 实用技巧</div>
+          <p>把默剧道具当成实验对象，用对照镜头拆解每一个动作背后的物理与心理逻辑。</p>
+          <div class="cnums"><div><b>94</b>作品</div><div><b>9.8万</b>关注</div></div>
+          <button class="btn btn-soft cbtn" onclick="openAuthor('布袋研究员','道具测评 / 实用技巧','前工业设计师，把默剧道具当成实验对象，用对照镜头拆解每一个动作背后的物理与心理逻辑。')">查看档案</button>
+        </article>
+
+        <article class="creator">
+          <div class="cav" style="background:linear-gradient(140deg,#241d4e,#4a3f8c)">灯</div>
+          <h3>灯下三分钟</h3>
+          <div class="crole">治愈影像 / 日常记录</div>
+          <p>擅长一镜到底的室内小品，用一盏台灯和一扇窗讲完一个人的一整个夜晚。</p>
+          <div class="cnums"><div><b>52</b>作品</div><div><b>11.4万</b>关注</div></div>
+          <button class="btn btn-soft cbtn" onclick="openAuthor('灯下三分钟','治愈影像 / 日常记录','擅长一镜到底的室内小品，用一盏台灯和一扇窗讲完一个人的一整个夜晚。更新很慢，但每条都认真。')">查看档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像墙 -->
+  <section id="wall">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">影像墙</span>
+        <h2>社区作品墙：<em>每一格都是一次练习</em></h2>
+        <p>来自不同城市、不同设备、不同经验的创作者，用封面记录下他们练习默剧的那些下午。点击任意作品可进入详情页。</p>
+      </div>
+      <div class="wall">
+        <figure class="w-big">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='w1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23241d4e'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='url(%23w1)'/%3E%3Ccircle cx='360' cy='110' r='70' fill='%23ff8a5c' opacity='.75'/%3E%3Cpath d='M80 330q60-160 150-160t150 160' stroke='%23f6f3ee' stroke-width='8' fill='none' stroke-linecap='round' opacity='.9'/%3E%3Ccircle cx='230' cy='150' r='26' fill='%23f6f3ee' opacity='.9'/%3E%3Crect x='60' y='352' width='380' height='10' rx='5' fill='%23f6f3ee' opacity='.35'/%3E%3C/svg%3E" alt="作品墙大图：紫色舞台上的默剧演员与橙色聚光灯">
+          <figcaption>《一个人的谢幕》· 陈默</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23ffd9c7'/%3E%3Ccircle cx='150' cy='86' r='34' fill='%23ff8a5c'/%3E%3Cpath d='M120 160q30 24 60 0' stroke='%23241d4e' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Crect x='60' y='176' width='180' height='8' rx='4' fill='%23241d4e' opacity='.3'/%3E%3C/svg%3E" alt="作品封面：暖橘背景上的简笔笑脸">
+          <figcaption>《笑一个》· 小满</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%232fc4a6'/%3E%3Cg stroke='%2317123a' stroke-width='5' fill='none' stroke-linecap='round'%3E%3Cpath d='M60 150V90h60v60'/%3E%3Cpath d='M180 150V70h60v80'/%3E%3C/g%3E%3Ccircle cx='90' cy='66' r='14' fill='%23f6f3ee'/%3E%3Ccircle cx='210' cy='46' r='14' fill='%23f6f3ee'/%3E%3C/svg%3E" alt="作品封面：青绿背景上两扇静止的窗">
+          <figcaption>《窗内窗外》· 灯下三分钟</figcaption>
+        </figure>
+        <figure class="w-wide">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 200'%3E%3Cdefs%3E%3ClinearGradient id='w2' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%235a3be0'/%3E%3Cstop offset='1' stop-color='%232fc4a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='200' fill='url(%23w2)'/%3E%3Cg fill='%23f6f3ee' opacity='.85'%3E%3Crect x='50' y='120' width='40' height='60' rx='6'/%3E%3Crect x='110' y='90' width='40' height='90' rx='6'/%3E%3Crect x='170' y='140' width='40' height='40' rx='6'/%3E%3Ccircle cx='360' cy='80' r='30'/%3E%3C/g%3E%3Cpath d='M300 170h140' stroke='%23ffd9c7' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" alt="作品封面：蓝绿渐变上的几何城市剪影">
+          <figcaption>《搬家的下午》· 纸箱剧场</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23e6ddff'/%3E%3Cpath d='M80 160q50-120 140 0z' fill='%237c5cff'/%3E%3Ccircle cx='150' cy='96' r='18' fill='%23f6f3ee'/%3E%3Cpath d='M150 96v54' stroke='%23241d4e' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" alt="作品封面：淡紫背景上的伞形轮廓">
+          <figcaption>《雨天不借伞》· 布袋研究员</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23241d4e'/%3E%3Ccircle cx='150' cy='100' r='44' fill='%23ff8a5c' opacity='.9'/%3E%3Cpath d='M118 74l-12-24 24 11zM182 74l12-24-24 11z' fill='%23ff8a5c'/%3E%3Ccircle cx='136' cy='96' r='5' fill='%23241d4e'/%3E%3Ccircle cx='164' cy='96' r='5' fill='%23241d4e'/%3E%3C/svg%3E" alt="作品封面：深色背景上的小猫头像">
+          <figcaption>《深夜巡场》· 哑剧猫官方</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f6f3ee'/%3E%3Cg fill='%23ff8a5c'%3E%3Crect x='50' y='120' width='16' height='50' rx='4'/%3E%3Crect x='80' y='90' width='16' height='80' rx='4'/%3E%3Crect x='110' y='60' width='16' height='110' rx='4'/%3E%3C/g%3E%3Cg fill='%235a3be0'%3E%3Crect x='160' y='100' width='16' height='70' rx='4'/%3E%3Crect x='190' y='70' width='16' height='100' rx='4'/%3E%3Crect x='220' y='130' width='16' height='40' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="作品封面：米白背景上的橙紫声波柱状图">
+          <figcaption>《没有声音的一分钟》· 音效组</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事 / 随笔 -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">社区随笔</span>
+        <h2>镜头之外，<em>他们也写下来</em></h2>
+        <p>有些感受不适合放进视频，于是变成了文字。以下是本周社区推荐的三篇随笔，均来自入驻创作者。</p>
+      </div>
+      <div class="stories">
+        <article class="story">
+          <div class="sico" style="background:#fff2ec">🌤️</div>
+          <h3>第一次在广场演完整场</h3>
+          <p>风把纸板道具吹倒了三次，观众反而笑了三次。那天我明白，默剧的失败也是表演的一部分，只要你不急着逃走。</p>
+          <div class="sby">文 / 纸箱剧场 · 3 小时前</div>
+        </article>
+        <article class="story">
+          <div class="sico" style="background:#e6f9f4">🎧</div>
+          <h3>关掉台词之后，我才听见呼吸</h3>
+          <p>剪辑到第七版时，我把所有对白都删了，只留下环境音。那一刻画面突然站起来了，像是终于有了自己的重量。</p>
+          <div class="sby">文 / 灯下三分钟 · 昨天</div>
+        </article>
+        <article class="story">
+          <div class="sico" style="background:#efe9ff">📦</div>
+          <h3>一把椅子能演多少种孤独</h3>
+          <p>我数过：等人的孤独、散场的孤独、假装不在意的孤独。椅子不会说话，但它比谁都懂怎么配合沉默的演员。</p>
+          <div class="sby">文 / 陈默 · 2 天前</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">社区口碑</span>
+        <h2>真实用户，<em>真实的反馈</em></h2>
+        <p>来自不同入口的留言，有的谈内容，有的谈氛围，也有的谈一个小小的细节。我们保留它们原本的样子。</p>
+      </div>
+      <div class="reviews">
+        <div class="review">
+          <div class="rhead"><span class="avatar" style="background:#7c5cff">林</span><b>林小满</b><span>· 社区成员 2 年</span><span class="rstars">★★★★★</span></div>
+          <p>在哑剧猫第一次认真看完一支没有台词的短片，看完才发现自己一直屏着呼吸。这个平台的选片很克制，不追热点，但每支都值得看第二遍。</p>
+        </div>
+        <div class="review">
+          <div class="rhead"><span class="avatar" style="background:#2fc4a6">阿</span><b>阿枣</b><span>· 创作者</span><span class="rstars">★★★★★</span></div>
+          <p>投稿流程非常清楚，官方给了统一的片头和声音包，对我这种第一次做默剧的人来说省了太多事。反馈邮件也写得很具体，不是模板。</p>
+        </div>
+        <div class="review">
+          <div class="rhead"><span class="avatar" style="background:#ff8a5c">周</span><b>周不困</b><span>· 普通观众</span><span class="rstars">★★★★☆</span></div>
+          <p>喜欢专题企划的策展思路，能看到同一个主题下很多不同的表达。唯一的小建议是希望搜索可以按地区筛选，想找本地创作者的线下放映。</p>
+        </div>
+        <div class="review">
+          <div class="rhead"><span class="avatar" style="background:#5a3be0">吴</span><b>吴声</b><span>· 剧场爱好者</span><span class="rstars">★★★★★</span></div>
+          <p>作为一个常看现场的人，我很在意镜头有没有打断表演节奏。这里的作品大多保留了完整的段落，没有为了节奏乱切，这点很专业。</p>
+        </div>
+        <div class="review">
+          <div class="rhead"><span class="avatar" style="background:#241d4e">沈</span><b>沈知秋</b><span>· 社区成员 1 年</span><span class="rstars">★★★★★</span></div>
+          <p>评论区氛围是少见的温和，大家讨论动作、光线、道具，很少吵架。可能因为看默剧的人本身就比较愿意等一等。</p>
+        </div>
+        <div class="review">
+          <div class="rhead"><span class="avatar" style="background:#2fc4a6">小</span><b>小骨</b><span>· 学生</span><span class="rstars">★★★★☆</span></div>
+          <p>身体默剧的七天教程我跟着练到第四天，室友说我走路变好看了。虽然有点夸张，但确实对镜头前的紧张感有帮助。</p>
+        </div>
+        <div class="review">
+          <div class="rhead"><span class="avatar" style="background:#ff8a5c">顾</span><b>顾一舟</b><span>· 摄影爱好者</span><span class="rstars">★★★★★</span></div>
+          <p>画质是真的高清，在投影上看也没有糊。很多片的打光和构图可以直接当摄影参考，我存了一整个收藏夹。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section id="news" class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">企业动态</span>
+        <h2>哑剧猫的<em>近期发布与更新</em></h2>
+        <p>包含官方发布、产品更新与社区活动信息。我们尽量把每一条都写得具体，让你知道我们真的在做什么。</p>
+      </div>
+      <div class="dyn-grid">
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tldate">2025 年 4 月 12 日 · 官方发布</div>
+            <h3>《哑剧猫·城市默片》第三季正式定档</h3>
+            <p>第三季共 8 集，首次采用双城对照剪辑，4 月 18 日起每周五在官网首发，同步开放幕后花絮与拍摄手记下载。</p>
+          </div>
+          <div class="tl-item">
+            <div class="tldate">2025 年 4 月 8 日 · 产品更新</div>
+            <h3>创作者工作台上线声音包模块</h3>
+            <p>新增 40 组环境音与 12 套转场音效，全部可商用，支持一键试听与打包下载，帮助默剧作品建立更完整的听觉层次。</p>
+          </div>
+          <div class="tl-item">
+            <div class="tldate">2025 年 3 月 30 日 · 社区活动</div>
+            <h3>春季肢体喜剧共创比赛开放报名</h3>
+            <p>两人组队、三分钟以内，前 30 名作品获得首页展位与联合署名，优秀团队将受邀参与线下小剧场联演。</p>
+          </div>
+          <div class="tl-item">
+            <div class="tldate">2025 年 3 月 22 日 · 社会责任</div>
+            <h3>「无声课堂」公益计划第二期落地</h3>
+            <p>联合三地特殊教育学校开展默剧工作坊，提供教材与线上课程，累计覆盖 420 名学生，后续将发布课程影像合辑。</p>
+          </div>
+          <div class="tl-item">
+            <div class="tldate">2025 年 3 月 15 日 · 平台动态</div>
+            <h3>高清片源与字幕校对规范升级</h3>
+            <p>所有官方推荐作品统一提供 1080P 片源与双语字幕校对，社区投稿也将逐步接入自动画幅检测与音轨标准化处理。</p>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:16.5px;margin-bottom:8px">合作品牌与伙伴</h3>
+          <p style="font-size:13.6px;color:var(--muted)">哑剧猫与剧场、影像设备、城市文化机构长期合作，共同推动无声表演走进更多公共空间。</p>
+          <div class="partners">
+            <div class="partner">拾光小剧场</div>
+            <div class="partner">南方影像实验室</div>
+            <div class="partner">城市文化周</div>
+            <div class="partner">白噪声音效</div>
+            <div class="partner">纸间书店</div>
+            <div class="partner">慢岛放映社</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head" style="max-width:760px;margin:0 auto 34px">
+        <span class="eyebrow">帮助中心</span>
+        <h2>常见问题，<em>一次说清</em></h2>
+        <p>如果你刚接触哑剧猫，下面几个问题大概能帮你更快开始。也可以直接联系我们。</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>哑剧猫是什么？和普通的视频平台有什么区别？</summary>
+          <div class="faq-body">哑剧猫是一家以默剧、肢体喜剧与无声影像为核心的视频品牌官网，专注这一垂直领域的内容生产与社区运营。我们不追求内容数量，更在意每支作品的表演完成度与影像品质，因此所有官方推荐作品都会经过人工审核与画质校对。</div>
+        </details>
+        <details>
+          <summary>怎样成为入驻创作者？需要什么条件？</summary>
+          <div class="faq-body">年满 18 周岁、拥有至少 3 支原创默剧或肢体表演作品即可提交申请。我们更看重表达的诚实与完整性，而不是设备等级。审核周期通常为 5 个工作日，通过后会收到创作工作台账号与官方素材包。</div>
+        </details>
+        <details>
+          <summary>投稿作品可以同时发布在其他平台吗？</summary>
+          <div class="faq-body">可以。哑剧猫尊重创作者的多元发行，只要作品为本人原创且无版权争议，我们支持同步发布。参与官方专题企划的作品，我们会与作者单独确认首发与署名方式。</div>
+        </details>
+        <details>
+          <summary>素材包里的音乐和音效可以商用吗？</summary>
+          <div class="faq-body">可以。官网提供的官方声音包均已获得授权，允许在哑剧猫发布的内容中免费商用。如需用于商业广告或其他平台发行，请通过联系页面获取书面授权说明。</div>
+        </details>
+        <details>
+          <summary>画质和字幕为什么值得单独说明？</summary>
+          <div class="faq-body">默剧依赖动作与表情的细微变化，压缩过度会直接损失表演信息。我们坚持提供高清片源，并对官方推荐作品进行字幕时间轴与错别字校对，确保观众看到的是创作者真正想呈现的版本。</div>
+        </details>
+        <details>
+          <summary>如何参与线下放映与工作坊？</summary>
+          <div class="faq-body">关注企业动态栏目，每场活动会提前两周开放报名。社区成员可优先获得名额，参与过专题企划的创作者还可申请现场展映自己的作品。</div>
+        </details>
+        <details>
+          <summary>如果发现作品存在版权问题怎么办？</summary>
+          <div class="faq-body">请通过联系页面的反馈入口提交说明与相关证据，我们会在 48 小时内核实处理。对于确认侵权的作品，平台会立即下架并同步告知相关创作者，必要时终止合作。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div class="contact-grid">
+          <div>
+            <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#f0ebff">联系我们</span>
+            <h2 style="margin-bottom:6px">一起做点<br>安静但有力的事</h2>
+            <p style="color:#c4bce6;font-size:14.5px;max-width:440px">无论你是创作者、剧场机构还是品牌方，只要对无声表演有兴趣，都欢迎写信给我们。我们通常会在两个工作日内回复。</p>
+            <div class="c-actions">
+              <button class="btn btn-primary" onclick="openSubmit()">投稿入口</button>
+              <button class="btn btn-ghost" onclick="openFeedback()">反馈与举报</button>
+              <button class="btn btn-ghost" onclick="sharePage()">分享本页</button>
+            </div>
+          </div>
+          <div class="c-info">
+            <div><span>商务合作</span><b>brand@mimecat.studio</b></div>
+            <div><span>创作者支持</span><b>creator@mimecat.studio</b></div>
+            <div><span>线下放映与工作坊</span><b>上海 · 拾光小剧场（每月一场）</b></div>
+            <div><span>工作时间</span><b>周一至周五 10:00 - 19:00</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="flogo"><span class="logo-mark" style="width:32px;height:32px;font-size:15px">🐾</span>哑剧猫</div>
+        <p>哑剧猫官方网站，深耕无声喜剧与肢体表演领域的原创视频品牌。我们持续运营高品质内容生态，与创作者一起，把沉默里的温暖与力量带给更多人。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#focus">焦点内容</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#wall">影像墙</a></li>
+          <li><a href="#creators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#news">企业动态</a></li>
+          <li><a href="#faq">帮助中心</a></li>
+          <li><a href="#contact">联系我们</a></li>
+          <li><a href="#contact">商务合作</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区</h4>
+        <ul>
+          <li><a href="#contact" onclick="openSubmit();return false;">作品投稿</a></li>
+          <li><a href="#contact" onclick="openFeedback();return false;">反馈与举报</a></li>
+          <li><a href="#topics">共创比赛报名</a></li>
+          <li><a href="#contact">线下放映预约</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2025 哑剧猫 MIME CAT · 官方网站 · 版权所有 · 持续运营中</div>
+      <div class="fb-links">
+        <a href="#top">返回首页</a>
+        <a href="#faq">使用条款</a>
+        <a href="#faq">隐私说明</a>
+        <span>备案号占位：沪ICP备00000000号</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="backTop" aria-label="回到顶部">↑</button>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal-mask" id="modalMask">
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<script>
+/* ---------- 通用 ---------- */
+function toast(msg){
+  var t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  clearTimeout(t._tm);
+  t._tm=setTimeout(function(){t.classList.remove('show')},2200);
+}
+
+/* ---------- 移动端导航 ---------- */
+var burger=document.getElementById('burger');
+var mnav=document.getElementById('mobileNav');
+burger.addEventListener('click',function(){
+  var open=mnav.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  burger.textContent=open?'✕':'☰';
+});
+mnav.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    mnav.classList.remove('open');
+    burger.textContent='☰';
+    burger.setAttribute('aria-expanded','false');
+  });
+});
+
+/* ---------- 搜索 ---------- */
+function doSearch(e){
+  e.preventDefault();
+  var kw=document.getElementById('searchInput').value.trim();
+  var tip=document.getElementById('searchTip');
+  if(!kw){
+    tip.classList.remove('show');
+    toast('请输入关键词后再搜索');
+    return false;
+  }
+  var cards=document.querySelectorAll('.vcard');
+  var hits=0;
+  cards.forEach(function(c){
+    var text=(c.textContent+' '+(c.getAttribute('data-keywords')||'')).toLowerCase();
+    if(text.indexOf(kw.toLowerCase())>-1) hits++;
+  });
+  var extra = hits>0
+    ? '在焦点内容中匹配到 <mark>'+hits+'</mark> 支相关作品。'
+    : '焦点内容中暂无完全匹配，以下方向或许对你有帮助：';
+  var rec = ['默剧入门教程','城市默片','人物访谈','道具测评','无声表演工作坊'];
+  tip.innerHTML='你搜索了「<b>'+kw.replace(/[<>]/g,'')+'</b>」。'+extra+
+    ' <a href="#focus" style="color:#5a3be0;font-weight:600;text-decoration:underline">去焦点内容看看 →</a>'+
+    (hits===0?'<br><span style="color:#6f6a80">推荐关键词：'+rec.join(' · ')+'</span>':'');
+  tip.classList.add('show');
+  toast(hits>0?('找到 '+hits+' 支相关内容'):'已展示搜索建议');
+  return false;
+}
+
+/* ---------- 点赞 / 收藏 / 复制 ---------- */
+function toggleLike(btn){
+  var liked=btn.classList.toggle('liked');
+  var base=parseInt(btn.getAttribute('data-likes')||'0',10);
+  var b=btn.querySelector('b');
+  if(b){
+    b.textContent = liked ? base+1 : base;
+  }
+  toast(liked?'已点赞，感谢你的喜欢':'已取消点赞');
+}
+function toggleSave(btn){
+  var saved=btn.classList.toggle('saved');
+  btn.textContent = saved ? '♥ 已收藏' : '☆ 收藏';
+  toast(saved?'已加入收藏夹':'已取消收藏');
+}
+function copyLink(btn){
+  var url=location.href.split('#')[0];
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(function(){toast('链接已复制，可以分享给同好了')});
+  }else{
+    toast('浏览器不支持自动复制，请手动复制地址栏链接');
+  }
+}
+function sharePage(){
+  var url=location.href.split('#')[0];
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(function(){toast('分享链接已复制，可发送至微信 / 微博 / QQ')});
+  }else{
+    toast('分享链接：'+url);
+  }
+}
+
+/* ---------- 弹窗基础 ---------- */
+var mask=document.getElementById('modalMask');
+var mbox=document.getElementById('modalBox');
+function closeModal(){mask.classList.remove('open');mbox.innerHTML='';}
+mask.addEventListener('click',function(e){if(e.target===mask)closeModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+
+function showModal(html){
+  mbox.innerHTML='<button class="mclose" onclick="closeModal()" aria-label="关闭">✕</button>'+html;
+  mask.classList.add('open');
+}
+
+/* ---------- 视频详情 ---------- */
+function openVideo(e,title){
+  e.preventDefault();
+  showModal(
+    '<h3>'+title+'</h3>'+
+    '<p>该作品已在哑剧猫官方内容中心上线，支持高清画质与字幕校对。创作者署名与幕后花絮同步开放查阅。</p>'+
+    '<div style="background:#fbfaf7;border:1px dashed #e5e0d6;border-radius:12px;padding:14px;font-size:13.4px;color:#6f6a80;margin-bottom:16px">'+
+    '· 建议佩戴耳机观看，注意环境音的层次<br>'+
+    '· 默剧作品通常无对白，请耐心看完开场 30 秒<br>'+
+    '· 作品版权归创作者所有，转载请联系官方授权'+
+    '</div>'+
+    '<button class="btn btn-primary" onclick="closeModal();toast(\'已加入稍后观看列表\')">加入稍后观看</button>'
+  );
+}
+
+/* ---------- 作者档案 ---------- */
+function openAuthor(name,role,desc){
+  showModal(
+    '<h3>'+name+'</h3>'+
+    '<p style="color:#5a3be0;font-weight:600;margin-bottom:10px">'+role+'</p>'+
+    '<p>'+desc+'</p>'+
+    '<p style="margin-top:14px">长期在哑剧猫发布原创作品，参与多个官方专题企划，作品以稳定的影像品质与真实的表演质感获得社区口碑。</p>'+
+    '<button class="btn btn-primary" onclick="closeModal();toast(\'已关注 '+name+'\')">关注该创作者</button>'
+  );
+}
+
+/* ---------- 评论 ---------- */
+function openComment(btn,title){
+  showModal(
+    '<h3>评论 · '+title+'</h3>'+
+    '<p>社区共 216 条讨论，以下是正在被点赞的几条。</p>'+
+    '<div style="font-size:13.5px;color:#3a3650;display:flex;flex-direction:column;gap:12px;margin-bottom:18px;max-height:240px;overflow:auto">'+
+    '<div style="background:#fbfaf7;border-radius:10px;padding:10px 12px"><b>慢半拍：</b>递空气那一下我反复看了五遍，手部线条太干净了。</div>'+
+    '<div style="background:#fbfaf7;border-radius:10px;padding:10px 12px"><b>南窗：</b>跟着练了三天，发现自己以前连站立都很用力。</div>'+
+    '<div style="background:#fbfaf7;border-radius:10px;padding:10px 12px"><b>一只梨：</b>希望后续能出一期关于眼神停留时长的讲解。</div>'+
+    '</div>'+
+    '<div class="field"><label>写下你的想法</label><textarea rows="3" placeholder="说说你注意到了哪个细节…"></textarea></div>'+
+    '<button class="btn btn-primary" onclick="closeModal();toast(\'评论已提交，审核后展示\')">提交评论</button>'
+  );
+}
+
+/* ---------- 投稿 ---------- */
+function openSubmit(){
+  showModal(
+    '<h3>作品投稿</h3>'+
+    '<p>欢迎通过以下信息提交你的默剧或肢体表演作品，我们会在 5 个工作日内回复。</p>'+
+    '<div class="field"><label>作品标题</label><input type="text" placeholder="例如：一张椅子的三种孤独"></div>'+
+    '<div class="field"><label>创作者昵称</label><input type="text" placeholder="你的社区昵称"></div>'+
+    '<div class="field"><label>作品类型</label><select><option>默剧短片</option><option>肢体喜剧</option><option>城市默片</option><option>幕后纪录</option><option>教学教程</option></select></div>'+
+    '<div class="field"><label>作品简介</label><textarea rows="3" placeholder="简单介绍创意来源与拍摄过程"></textarea></div>'+
+    '<button class="btn btn-primary" onclick="closeModal();toast(\'投稿信息已记录，请留意邮件回复\')">提交投稿</button>'
+  );
+}
+
+/* ---------- 反馈 ---------- */
+function openFeedback(){
+  showModal(
+    '<h3>反馈与举报</h3>'+
+    '<p>如果发现内容错误、版权争议或社区行为问题，请告诉我们，我们会在 48 小时内核实。</p>'+
+    '<div class="field"><label>问题类型</label><select><option>内容错误</option><option>版权争议</option><option>社区行为</option><option>功能建议</option></select></div>'+
+    '<div class="field"><label>详细说明</label><textarea rows="4" placeholder="请描述具体情况，便于我们定位问题"></textarea></div>'+
+    '<div class="field"><label>联系方式（选填）</label><input type="text" placeholder="邮箱或手机号"></div>'+
+    '<button class="btn btn-primary" onclick="closeModal();toast(\'反馈已提交，感谢你的认真\')">提交反馈</button>'
+  );
+}
+
+/* ---------- 回到顶部 ---------- */
+var bt=document.getElementById('backTop');
+window.addEventListener('scroll',function(){
+  if(window.scrollY>520){bt.classList.add('show')}else{bt.classList.remove('show')}
+},{passive:true});
+bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+/* ---------- 数据数字滚动 ---------- */
+(function(){
+  var nums=document.querySelectorAll('.hero-stats strong[data-count]');
+  if(!nums.length) return;
+  var done=false;
+  function run(){
+    if(done) return; done=true;
+    nums.forEach(function(el){
+      var target=parseInt(el.getAttribute('data-count'),10);
+      var suffix=el.textContent.replace(/[0-9,.]/g,'');
+      var start=0,step=target/36;
+      var timer=setInterval(function(){
+        start+=step;
+        if(start>=target){start=target;clearInterval(timer);}
+        var v=Math.round(start);
+        el.textContent=v.toLocaleString('en-US')+suffix;
+      },28);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting)run();});
+    },{threshold:.4});
+    nums.forEach(function(n){io.observe(n);});
+  }else{run();}
+})();
+</script>
+</body>
+            </html>
